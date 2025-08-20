@@ -53,6 +53,7 @@ address{
 
 .web-link{
     color: #3498db;
+    text-decoration: none;
 }
 
 
@@ -102,13 +103,21 @@ main{
 .main-article{
     display: flex;
     gap: 1.1rem;
-    margin-top: -20px;
+    margin: -20px 0 -20px 0;
     align-items: start;
 }
 
-li{
-    line-height: 1.3em;
+.main-skills{
+    display: grid;
+    grid-template-columns: 50%  1fr;
+    list-style-type: none ;
+    padding: 0;
 }
+
+li{
+    line-height: 1.4em;
+}
+
 
 img{
     height: 160px;
@@ -117,4 +126,10 @@ img{
     display: block;
     margin: 0 auto;
     padding-bottom: 25px;
+}
+
+@media (max-width: 500px) {
+    body{
+        grid-template-columns: 1fr;
+    }
 }
